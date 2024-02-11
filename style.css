@@ -6,6 +6,8 @@
   box-sizing: border-box;
   text-decoration: none;
   border: none;
+  outline: none;
+  right: 0;
   scroll-behavior: smooth;
   font-family: "Poppins", sans-serif;
 }
@@ -36,6 +38,7 @@ section {
   position: fixed;
   top: 0;
   left: 0;
+  right: 0;
   width: 100%;
   padding: 2rem 10%;
   display: flex;
@@ -102,7 +105,7 @@ section {
 
 .icons {
   position: absolute;
-  right: 10%;
+  right: 20%;
   font-size: 2.8rem;
   color: white;
   cursor: pointer;
@@ -112,6 +115,7 @@ section {
 .home {
   display: flex;
   justify-content: center;
+  left: 50%;
   align-items: center;
 }
 
@@ -176,7 +180,7 @@ section {
 }
 
 .home-img img {
-  width: 35vw;
+  width: 30vw;
   animation: floatImage 4s ease-in-out infinite;
 }
 
@@ -323,8 +327,8 @@ span {
 }
 
 .about-container {
-  padding: 7% 1.4rem;
   display: flex;
+  left: 0;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
@@ -333,11 +337,13 @@ span {
 
 .about-container .about-box {
   flex: 1 1 30rem;
+  left: 0;
   background: var(--second-bg-color);
-  padding: 3rem 2rem 4rem;
+  padding: 3rem 2rem 3rem;
   border-radius: 2rem;
   text-align: center;
-  border: .2rem solid var(--bg-color);
+  justify-content: center;
+  border: .19rem solid var(--bg-color);
   transition: .5s ease;
 }
 
@@ -352,7 +358,7 @@ span {
 
 .about-box p {
   font-size: 1.6rem;
-  margin: 1rem 0 3rem;
+  margin: 2rem 4rem;
 }
 
 .gallery {
@@ -557,7 +563,12 @@ span {
 }
 
 /* BREAKPOINTS */
-@media (max-width: 768px) {
+@media (max-width: 500px) {
+  html {
+    font-size: 55%;
+    left: 0;
+  }
+
   .icons {
     display: inline-flex;
   }
@@ -578,6 +589,7 @@ span {
     position: absolute;
     top: 100%;
     left: 0;
+    right: 0;
     width: 100%;
     height: 0;
     background: #1f242d;
@@ -629,6 +641,7 @@ span {
 
   .home-img img {
     width: 70vw;
+    align-items: center;
     margin-top: 4rem;
   }
 
